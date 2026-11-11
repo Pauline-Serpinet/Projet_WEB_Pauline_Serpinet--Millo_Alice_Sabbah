@@ -7,7 +7,7 @@ body {
     text-align: center;          /* centre tous les textes (titres, paragraphes, footer) */
 }
 
-/* Bannière : une image est un élément "en ligne", il faut la passer en bloc */
+/* Bannière */
 img[src*="banniere"] {
     display: block;
     margin: 0 auto;              /* marges auto à gauche et à droite = centré */
@@ -29,7 +29,7 @@ img[src*="banniere"] {
 
 .produit img {
     width: 100%;
-    height: 380px;              /* <-- Agrandit images proportion */
+    height: 380px;           
     object-fit: cover;
 }
 
@@ -38,11 +38,11 @@ section h2 {
     text-transform: uppercase;
     font-size: 30px;
     background-color: #e0c185;   /* le rectangle de couleur */
-    color: white;                /* texte en blanc pour qu'il reste lisible */
-    padding: 15px;               /* espace entre le texte et les bords du rectangle */
+    color: white;              
+    padding: 15px;       
 }
 
-/* Supprime les marges par défaut de la page pour coller la bannière tout en haut */
+/* Supprime les marges de la page */
 body {
   margin: 0;
   padding: 0;
@@ -52,7 +52,7 @@ body {
 /* La bannière en haut avec l'image en fond */
 .banniere {
   width: 100%;
-  height: 300px; /* Ajuste la hauteur de la bannière selon tes besoins */
+  height: 300px; 
   background-image: url(../img/banniere.jpg); 
   background-size: cover;
   background-position: center;
@@ -66,14 +66,14 @@ body {
 
 /* Style du titre Bohémia sur l'image */
 .banniere h1 {
-  font-family: 'Playfair Display', serif; /* Police élégante avec empattements */
-  font-size: 3.5rem;                     /* Taille plus grande et majestueuse */
-  font-weight: 400;                      /* Poids normal (plus fin qu'en gras) */
-  font-style: italic;                    /* Optionnel : l'italique apporte un côté très chic */
-  letter-spacing: 4px;                   /* Espace les lettres pour un effet luxueux */
-  color: #534312;                        /* Un noir adouci (ou #ffffff blanc si ton image est sombre) */
+  font-family: 'Playfair Display', serif; 
+  font-size: 3.5rem;                     
+  font-weight: 400;                      
+  font-style: italic;                   
+  letter-spacing: 4px;                   
+  color: #534312;                        
   margin: 0 0 20px 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour le faire ressortir sur le fond */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -97,9 +97,9 @@ h2 {
 /* Alignement du menu de navigation */
 .menu-principal ul {
   display: flex;
-  justify-content: center;   /* Centre les catégories */
+  justify-content: center;   /* Centre les caté */
   gap: 200px;                 /* Espace entre les liens */
-  list-style-type: none;     /* Supprime les puces de la liste */
+  list-style-type: none;     /* Supprimepuces de la liste */
   padding: 0;
   margin-top: 50px;
 }
@@ -107,11 +107,11 @@ h2 {
 /* Style des liens du menu */
 .menu-principal a {
   text-decoration: none;     /* Supprime le soulignement par défaut */
-  color: #000000;            /* Couleur noire */
+  color: #000000;           
   font-size: 16px;
 }
 
-/* Effet au survol de la souris */
+/* Effet au survol souris */
 .menu-principal a:hover {
   text-decoration: underline; 
 }
