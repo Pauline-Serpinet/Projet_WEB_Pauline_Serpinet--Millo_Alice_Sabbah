@@ -1,0 +1,117 @@
+
+body { /*police accueil */
+    font-family: 'Montserrat', sans-serif; 
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;          /* centre tous les textes (titres, paragraphes, footer) */
+}
+
+/* Bannière : une image est un élément "en ligne", il faut la passer en bloc */
+img[src*="banniere"] {
+    display: block;
+    margin: 0 auto;              /* marges auto à gauche et à droite = centré */
+}
+
+/* galerie photos  */
+.photos, .special {
+    display: flex;
+    flex-wrap: wrap;            
+    justify-content: center;
+    gap: 40px;                  /* Espace bouquets */
+    max-width: 1500px;         
+    margin: 30px auto 60px auto;
+}
+
+.produit {
+    width: 320px;               
+}
+
+.produit img {
+    width: 100%;
+    height: 380px;              /* <-- Agrandit images proportion */
+    object-fit: cover;
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    background-color: #e0c185;   /* le rectangle de couleur */
+    color: white;                /* texte en blanc pour qu'il reste lisible */
+    padding: 15px;               /* espace entre le texte et les bords du rectangle */
+}
+
+/* Supprime les marges par défaut de la page pour coller la bannière tout en haut */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* La bannière en haut avec l'image en fond */
+.banniere {
+  width: 100%;
+  height: 300px; /* Ajuste la hauteur de la bannière selon tes besoins */
+  background-image: url(../img/banniere.jpg); 
+  background-size: cover;
+  background-position: center;
+  
+  /* Centre le texte Bohémia et les liens verticalement et horizontalement */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style du titre Bohémia sur l'image */
+.banniere h1 {
+  font-family: 'Playfair Display', serif; /* Police élégante avec empattements */
+  font-size: 3.5rem;                     /* Taille plus grande et majestueuse */
+  font-weight: 400;                      /* Poids normal (plus fin qu'en gras) */
+  font-style: italic;                    /* Optionnel : l'italique apporte un côté très chic */
+  letter-spacing: 4px;                   /* Espace les lettres pour un effet luxueux */
+  color: #534312;                        /* Un noir adouci (ou #ffffff blanc si ton image est sombre) */
+  margin: 0 0 20px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour le faire ressortir sur le fond */
+}
+
+
+
+.banniere nav a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+/* Styles pour le contenu sous la bannière */
+.message-bienvenue {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+/* Alignement du menu de navigation */
+.menu-principal ul {
+  display: flex;
+  justify-content: center;   /* Centre les catégories */
+  gap: 200px;                 /* Espace entre les liens */
+  list-style-type: none;     /* Supprime les puces de la liste */
+  padding: 0;
+  margin-top: 50px;
+}
+
+/* Style des liens du menu */
+.menu-principal a {
+  text-decoration: none;     /* Supprime le soulignement par défaut */
+  color: #000000;            /* Couleur noire */
+  font-size: 16px;
+}
+
+/* Effet au survol de la souris */
+.menu-principal a:hover {
+  text-decoration: underline; 
+}
