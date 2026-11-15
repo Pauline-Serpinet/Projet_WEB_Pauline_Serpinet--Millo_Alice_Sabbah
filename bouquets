@@ -1,0 +1,171 @@
+<!DOCTYPE html> <!-- Version 5 de HTML -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nos bouquets - Bohémia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/accueil.css">
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header class="banniere">
+        <h1>Bohémia</h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="bouquets.html">Bouquets</a></li>
+                <li><a href="conseils.html">Conseils</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+
+
+        <!-- Galerie 1 : Nos bouquets de fleurs  -->
+        <h2>Nos bouquets</h2>
+        <div class="photos">
+            <div class="produit">
+                <!-- Photo : un clic appelle voirDetail() (fichier js/bouquet.js) pour afficher ou cacher le détail -->
+                <img src="../img/bouquet_fleurie.avif" onclick="voirDetail('detail-eclatant')" style="cursor: pointer;" alt="Bouquet orange" width="200" height="200">
+                <!-- Bouquet 1 : L'éclatant -->
+                <h3>L'éclatant</h3>
+                <p class="prix">À partir de 29,99 €</p>
+                <div id="detail-eclatant" style="display: none;">
+                    <p>Un bouquet très coloré aux tons roses et rouges, pour dire bravo ou illuminer une pièce.</p>
+                    <p><strong>Composition :</strong> Gerberas, œillets, amaryllis, célosie rouge, gypsophile et feuillage</p>
+                </div>
+            </div>
+            <!-- Bouquet 2 : Blanc Immortel -->
+            <div class="produit">
+                <img src="../img/bouquet_blanc.avif" onclick="voirDetail('detail-blanc')" style="cursor: pointer;" alt="Bouquet blanc" width="200" height="200">
+                <h3>Blanc Immortel</h3>
+                <p class="prix">À partir de 34,99 €</p>
+                <div id="detail-blanc" style="display: none;">
+                    <p>Un bouquet lumineux tout en blanc et en crème, élégant et apaisant.</p>
+                    <p><strong>Composition :</strong> Chrysanthèmes, gerberas, roses blanches, œillets crème, gypsophile et eucalyptus</p>
+                </div>
+            </div>
+            <!-- Bouquet 3 : Majesté Rose -->
+            <div class="produit">
+                <img src="../img/fleur_lys.avif" onclick="voirDetail('detail-lys')" style="cursor: pointer;" alt="Bouquet lys" width="200" height="200">
+                <h3>Majesté Rose</h3>
+                <p class="prix">À partir de 29,99 €</p>
+                <div id="detail-lys" style="display: none;">
+                    <p>Des lys parfumés aux tons roses, dont les boutons s'ouvrent peu à peu.</p>
+                    <p><strong>Composition :</strong> Lys roses et feuillage vert</p>
+                </div>
+            </div>
+            <!-- Bouquet 4 : L'Automne Rose -->
+            <div class="produit">
+                <img src="../img/bouquet_beige.avif" onclick="voirDetail('detail-automne')" style="cursor: pointer;" alt="Bouquet beige" width="200" height="200">
+                <h3>L'Automne Rose</h3>
+                <p class="prix">À partir de 39,99 €</p>
+                <div id="detail-automne" style="display: none;">
+                    <p>Les couleurs chaudes de l'automne : pêche, abricot et framboise.</p>
+                    <p><strong>Composition :</strong> Roses pêche, gerberas, chrysanthèmes bordeaux, œillets et feuillage</p>
+                </div>
+            </div>
+            <!-- Bouquet 5 : Douceur -->
+            <div class="produit">
+                <img src="../img/bouquet_melange.avif" onclick="voirDetail('detail-douceur')" style="cursor: pointer;" alt="Bouquet mélange" width="200" height="200">
+                <h3>Douceur</h3>
+                <p class="prix">À partir de 34,99 €</p>
+                <div id="detail-douceur" style="display: none;">
+                    <p>Un bouquet délicat et poétique, facile à offrir.</p>
+                    <p><strong>Composition :</strong> Mélange de fleurs de saison aux tons doux</p>
+                </div>
+            </div>
+            <!-- Bouquet 6 : Velour Rouge -->
+            <div class="produit">
+                <img src="../img/fleurs_cado.avif" onclick="voirDetail('detail-velours')" style="cursor: pointer;" alt="Bouquet cadeau" width="200" height="200">
+                <h3>Velour Rouge</h3>
+                <p class="prix">À partir de 24,99 €</p>
+                <div id="detail-velours" style="display: none;">
+                    <p>Un bouquet dans les tons bordeaux et rouges, original et durable.</p>
+                    <p><strong>Composition :</strong> Protéas, eucalyptus bordeaux, achillée et baies rouges</p>
+                </div>
+            </div>
+            <!-- Bouquet 7 : Flamenco -->
+            <div class="produit">
+                <img src="../img/fleur_rouge.avif" onclick="voirDetail('detail-flamenco')" style="cursor: pointer;" alt="Bouquet rouge" width="200" height="200">
+                <h3>Flamenco</h3>
+                <p class="prix">À partir de 34,99 €</p>
+                <div id="detail-flamenco" style="display: none;">
+                    <p>Un bouquet intense et passionné, pour marquer les esprits.</p>
+                    <p><strong>Composition :</strong> Fleurs de saison dans les tons rouges</p>
+                </div>
+            </div>
+            <!-- Bouquet 8 : Nacre -->
+            <div class="produit">
+                <img src="../img/fleur_jaune.avif" onclick="voirDetail('detail-nacre')" style="cursor: pointer;" alt="Bouquet jaune" width="200" height="200">
+                <h3>Nacre</h3>
+                <p class="prix">À partir de 29,99 €</p>
+                <div id="detail-nacre" style="display: none;">
+                    <p>Un bouquet frais et lumineux, qui met de bonne humeur.</p>
+                    <p><strong>Composition :</strong> Fleurs de saison dans les tons jaunes et clairs</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galerie 2 -->
+        <div>
+            <h2>Bouquets spéciaux</h2>
+            <div class="photos">
+                <!-- Bouquet 9 : L'irrésistible -->
+                <div class="produit">
+                    <img src="../img/bouquet_cadeau.avif" onclick="voirDetail('detail-irresistible')" style="cursor: pointer;" alt="Bouquet de roses rouges" width="200" height="200">
+                    <h3>L'irrésistible (bouquet + chocolats)</h3>
+                    <p class="prix">À partir de 49,99 €</p>
+                    <div id="detail-irresistible" style="display: none;">
+                        <p>Le bouquet cadeau parfait : fleurs et chocolats dans le même colis.</p>
+                        <p><strong>Composition :</strong> Amaryllis, alstroemérias, célosie, hypericum et feuillage, avec une boîte de chocolats</p>
+                    </div>
+                </div>
+                <!-- Bouquet 10 : Symphonie Rose -->
+                <div class="produit">
+                    <img src="../img/bouquet_rose.avif" onclick="voirDetail('detail-symphonie')" style="cursor: pointer;" alt="Bouquet rose" width="200" height="200">
+                    <h3>Symphonie Rose</h3>
+                    <p class="prix">À partir de 44,99 €</p>
+                    <div id="detail-symphonie" style="display: none;">
+                        <p>Un bouquet de roses romantique aux nuances de rose.</p>
+                        <p><strong>Composition :</strong> Roses roses et fuchsia, gypsophile et feuillage</p>
+                    </div>
+                </div>
+                <!-- Bouquet 11 : Promesse Bohème -->
+                <div class="produit">
+                    <img src="../img/bouquet_mariage.jpg" onclick="voirDetail('detail-mariage')" style="cursor: pointer;" alt="Bouquet de mariage" width="200" height="200">
+                    <h3>Promesse Bohème (pour mariage)</h3>
+                    <p class="prix">89,99 €</p>
+                    <div id="detail-mariage" style="display: none;">
+                        <p>Un bouquet de mariée bohème, à adapter avec notre équipe.</p>
+                        <p><strong>Composition :</strong> Roses de jardin pêche, lisianthus blancs, eucalyptus, queues de lièvre et herbe de la pampa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+            <!--Fenêtre de détail -->
+    <div id="fenetre" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); justify-content: center; align-items: center;">
+        <div id="contenu-detail" style="background-color: #fdfbf7; width: 90%; max-width: 500px; max-height: 90%; overflow: auto; padding: 25px; border: 1px solid #534312; text-align: left;"></div>
+    </div>
+
+
+    <!--Pied de page-->
+    <footer>
+        <nav class="menu-footer">
+            <a href="accueil.html">Accueil</a>
+            <a href="bouquets.html">Bouquets</a>
+            <a href="contact.html">Contact</a>
+            <a href="apropos.html">À propos</a>
+        </nav>
+        <p>© 2026 Pauline SERPINET--MILLO &amp; Alice SABBAH</p>
+        <p>Tous droits réservés</p>
+    </footer>
+</body>
+</html>
