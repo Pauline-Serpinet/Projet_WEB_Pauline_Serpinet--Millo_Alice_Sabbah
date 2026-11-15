@@ -1,14 +1,17 @@
-<!DOCTYPE html> 
+<!DOCTYPE html> <!-- Version 5 de HTML -->
 <html lang="fr"> 
-<head> 
-    <meta charset="UTF-8"> 
+<head> <!-- Entête du document HTML -->
+    <meta charset="UTF-8"> <!-- Encodage des caractères en UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title>Accueil - Bohémia</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- Lien vers le fichier CSS -->
     <link rel="stylesheet" href="../Css/accueil.css">
 </head>
 <body>
 
+
+    <!-- ===== En-tête  -->
     <header class="banniere">
         <h1>Bohémia</h1>
         <nav class="menu-principal">
@@ -16,25 +19,24 @@
                 <li><a href="accueil.html">Accueil</a></li>
                 <li><a href="bouquets.html">Bouquets</a></li>
                 <li><a href="conseils.html">Conseils</a></li>
+                <li><a href="QuizzFleur.html">Quizz</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="apropos.html">À propos</a></li>
 
             </ul>
         </nav>
     </header>
 
-    <!-- image d'ambiance avec le texte d'accroche -->
-
-    <div class="hero" style="background-image: url('../img/bouquet_fleurie.avif'); background-size: cover; background-position: center;">
-    <div class="hero-texte">
-        <p class="hero-titre">Des fleurs qui racontent une histoire</p>
-        <p>Bohémia compose pour vous des bouquets frais, colorés et pleins de caractère, pour chaque moment de la vie.</p>
+    <!-- Grande image d'ambiance avec le texte d'accroche -->
+        <div class="hero" style="background-image: url('../img/bouquet_fleurie.avif'); background-size: cover; background-position: center;"></div>
+            <p class="hero-titre">Des fleurs qui racontent une histoire</p>
+            <p>Bohémia compose pour vous des bouquets frais, colorés et pleins de caractère, pour chaque moment de la vie.</p>
+            <a class="lien-bouton" href="bouquets.html">Découvrir nos bouquets</a>
+        </div>
     </div>
-</div>
 
     <section>
 
-        <!-- Bouquets de saison -->
+        <!-- Bouquets de saison : seulement 4 bouquets, les autres sont sur la page Bouquets ===== -->
         <h2>Les bouquets de saison</h2>
         <div class="photos">
             <div class="produit">
@@ -60,28 +62,28 @@
         </div>
         <p><a class="lien-bouton" href="bouquets.html">Voir tous les bouquets</a></p>
 
-                <!-- Une fleur pour chaque occasion -->
+                <!-- Une fleur pour chaque occasion  -->
         <h2>Une fleur pour chaque occasion</h2>
         <div class="photos">
 
             <div class="produit">
                 <img src="../img/bouquet_cadeau.avif" alt="Bouquet de roses rouges et chocolats" width="200" height="200">
                 <h3>Anniversaire</h3>
-                <p>Un bouquet généreux, avec des chocolats si vous le souhaitez</p>
+                <p>Un bouquet généreux, avec des chocolats si vous le souhaitez.</p>
                 <p><a href="bouquets.html">Découvrir</a></p>
             </div>
 
             <div class="produit">
                 <img src="../img/bouquet_mariage.jpg" alt="Bouquet de mariage" width="200" height="200">
                 <h3>Mariage</h3>
-                <p>Bouquet de la mariée et décoration : parlons de votre projet</p>
+                <p>Bouquet de la mariée et décoration : parlons de votre projet.</p>
                 <p><a href="contact.html">Nous écrire</a></p>
             </div>
 
             <div class="produit">
                 <img src="../img/fleurs_cado.avif" alt="Bouquet cadeau" width="200" height="200">
                 <h3>Dire merci</h3>
-                <p>Des fleurs simples pour remercier, féliciter ou s'excuser</p>
+                <p>Des fleurs simples pour remercier, féliciter ou s'excuser.</p>
                 <p><a href="bouquets.html">Découvrir</a></p>
             </div>
 
@@ -89,7 +91,8 @@
 
             
 
-        <!-- Nos engagements  -->
+        <!-- ===== Nos engagements == -->
+                
         <h2>Pourquoi choisir Bohémia ?</h2>
         <div class="photos">
 
@@ -117,8 +120,8 @@
         </div>
 
 
-        <!-- Fleur du moment -->
-        <h2>Quelle fleur êtes-vous ?</h2>
+        <!-- ===== Fleur du moment : choisie au hasard par le JavaScript ===== -->
+        <h2>La fleur du moment</h2>
         <div class="box">
             <div id="fleur-semaine"></div>
             <p><a class="lien-bouton" href="QuizzFleur.html">Quelle fleur êtes-vous ?</a></p>
@@ -126,7 +129,7 @@
 
     </section>
 
-    <!-- Pied de page -->
+    <!-- ===== Pied de page : menu + lien vers la page à propos ===== -->
     <footer>
         <nav class="menu-footer">
             <a href="accueil.html">Accueil</a>
@@ -138,7 +141,34 @@
         <p>Tous droits réservés</p>
     </footer>
 
-  
+    <!-- ===== JavaScript (en bas de page, après le HTML) ===== -->
+    <script>
+        // Ferme le bandeau d'annonce quand on clique sur la croix
+        function fermerAnnonce() {
+            document.getElementById("annonce").style.display = "none";
+        }
+
+        // Liste des fleurs possibles (tu peux en ajouter : nom + description)
+        var fleursDuMoment = [
+            { nom: "Pivoine", description: "Romantique et généreuse, elle annonce l'arrivée des beaux jours." },
+            { nom: "Tournesol", description: "Solaire et joyeux, il apporte de la lumière dans toutes les pièces." },
+            { nom: "Lavande", description: "Apaisante et parfumée, elle se garde longtemps une fois séchée." },
+            { nom: "Dahlia", description: "Ses pétales très fournis donnent des bouquets spectaculaires en automne." },
+            { nom: "Orchidée", description: "Élégante et durable, elle demande peu d'eau mais beaucoup de lumière." }
+        ];
+
+        // On tire une fleur au hasard et on l'affiche dans la page
+        try {
+            var numero = Math.floor(Math.random() * fleursDuMoment.length);
+            var fleur = fleursDuMoment[numero];
+            document.getElementById("fleur-semaine").innerHTML =
+                "<h3>" + fleur.nom + "</h3>" +
+                "<p>" + fleur.description + "</p>";
+        } catch (erreur) {
+            // Si le script plante, le reste de la page reste affiché
+            console.log(erreur);
+        }
+    </script>
 
 </body>
 </html>
