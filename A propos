@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>À propos - Bohémia</title>
+
+    <!-- Police Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/accueil.css">
+</head>
+<body>
+
+    <!--En-tête  -->
+    <header class="banniere">
+        <h1>Bohémia</h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="bouquets.html">Bouquets</a></li>
+                <li><a href="conseils.html">Conseils</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>À propos du projet</h2>
+        <div class="box">
+            <p>Bohémia est un site de fleuriste réalisé dans le cadre du projet de programmation Web (TI504N).</p>
+            <p>Le site est développé en HTML5, CSS3 et JavaScript.</p>
+        </div>
+
+        <h2>L'équipe</h2>
+        <div class="box">
+            <h3>Pauline SERPINET--MILLO</h3>
+        
+        </div>
+        <div class="box">
+            <h3>Alice SABBAH</h3>
+            
+        </div>
+
+
+        <h2>Crédits</h2>
+        <div class="box">
+            <p>Source des photos utilisées : BLUM2000</p>
+            <p>Police utilisée : Google Fonts : Playfair Display</p>
+            <p>Utilisation de l'IA pour générer du texte sur l'entretien des fleurs/caractéristiques
+            </p>
+        </div>
+    </section>
+
+    <!--  Pied de page-->
+    <footer>
+        <nav class="menu-footer">
+            <a href="accueil.html">Accueil</a>
+            <a href="bouquets.html">Bouquets</a>
+            <a href="contact.html">Contact</a>
+            <a href="apropos.html">À propos</a>
+        </nav>
+        <p>© 2026 Pauline SERPINET--MILLO &amp; Alice SABBAH</p>
+        <p>Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
