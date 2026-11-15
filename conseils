@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conseils d'entretien - Bohémia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/accueil.css">
+</head>
+<body>
+
+    <!-- En-tête : nom du site + menu -->
+    <header class="banniere">
+        <h1>Bohémia</h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="bouquets.html">Bouquets</a></li>
+                <li><a href="conseils.html">Conseils</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Conseils d'entretien</h2>
+
+        <!--Tableau : un conseil par fleur -->
+        <div class="box">
+            <table>
+                <caption>Comment faire durer vos fleurs</caption>
+                <thead>
+                    <tr>
+                        <th>Fleur</th>
+                        <th>Eau</th>
+                        <th>Emplacement</th>
+                        <th>Durée en vase</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rose</td>
+                        <td>Eau fraîche tous les 2 jours, tiges coupées en biais</td>
+                        <td>Pièce fraîche, loin du soleil direct</td>
+                        <td>7 à 10 jours</td>
+                    </tr>
+                    <tr>
+                        <td>Tournesol</td>
+                        <td>Beaucoup d'eau, la tige est gourmande</td>
+                        <td>Pièce lumineuse</td>
+                        <td>7 à 10 jours</td>
+                    </tr>
+                    <tr>
+                        <td>Lavande</td>
+                        <td>Très peu d'eau, elle se garde aussi séchée</td>
+                        <td>Endroit sec et aéré</td>
+                        <td>7 à 10 jours</td>
+                    </tr>
+                    <tr>
+                        <td>Pivoine</td>
+                        <td>Eau fraîche tous les 2 jours</td>
+                        <td>Pièce fraîche</td>
+                        <td>5 à 7 jours</td>
+                    </tr>
+                    <tr>
+                        <td>Tulipe</td>
+                        <td>Quelques centimètres d'eau, elle continue de pousser</td>
+                        <td>Pièce fraîche</td>
+                        <td>5 à 7 jours</td>
+                    </tr>
+                    <tr>
+                        <td>Lys</td>
+                        <td>Eau fraîche, retirer les étamines orange qui tachent</td>
+                        <td>Pièce aérée</td>
+                        <td>7 à 14 jours</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--  Les gestes qui marchent pour toutes les fleurs-->
+        <h2>Nos 5 gestes pour tous les bouquets</h2>
+        <div class="box">
+            <ol>
+                <li>Coupez 2 cm de tige en biais avec un couteau bien aiguisé.</li>
+                <li>Retirez les feuilles qui trempent dans l'eau.</li>
+                <li>Changez l'eau tous les 2 jours et nettoyez le vase.</li>
+                <li>Éloignez le bouquet des radiateurs et du soleil direct.</li>
+                <li>Gardez-le loin de la corbeille de fruits, qui abrège la vie des fleurs.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!--Pied de page-->
+    <footer>
+        <nav class="menu-footer">
+            <a href="accueil.html">Accueil</a>
+            <a href="bouquets.html">Bouquets</a>
+            <a href="contact.html">Contact</a>
+            <a href="apropos.html">À propos</a>
+        </nav>
+        <p>© 2026 Pauline SERPINET--MILLO &amp; Alice SABBAH</p>
+        <p>Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
