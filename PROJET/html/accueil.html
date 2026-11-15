@@ -1,0 +1,187 @@
+<!DOCTYPE html> <!-- Version 5 de HTML -->
+<html lang="fr"> <!-- Précision de la langue pour le navigateur -->
+<head> <!-- Entête du document HTML -->
+    <meta charset="UTF-8"> <!-- Encodage des caractères en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Nécessaire pour le responsive (téléphone) -->
+    <title>Accueil - Bohémia</title> <!-- Titre de l'onglet du navigateur -->
+
+    <!-- Police Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="../Css/accueil.css">
+</head>
+<body>
+
+    <!-- ===== Bandeau d'annonce (on peut le fermer avec la croix) ===== -->
+    <!-- Pour changer le message : modifie simplement le texte ci-dessous -->
+    <div id="annonce">
+        Livraison offerte dès 50 € d'achat à Villejuif et alentours
+        <button type="button" onclick="fermerAnnonce()">&times;</button>
+    </div>
+
+    <!-- ===== En-tête : nom du site + menu ===== -->
+    <header class="banniere">
+        <h1>Bohémia</h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="bouquets.html">Bouquets</a></li>
+                <li><a href="conseils.html">Conseils</a></li>
+                <li><a href="QuizzFleur.html">Quizz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Grande image d'ambiance avec le texte d'accroche ===== -->
+    <!-- L'image se change dans le CSS (classe .hero) -->
+    <div class="hero">
+        <div class="hero-texte">
+            <p class="hero-titre">Des fleurs qui racontent une histoire</p>
+            <p>Bohémia compose pour vous des bouquets frais, colorés et pleins de caractère, pour chaque moment de la vie.</p>
+            <a class="lien-bouton" href="bouquets.html">Découvrir nos bouquets</a>
+        </div>
+    </div>
+
+    <section>
+
+        <!-- ===== Bouquets de saison : seulement 4 bouquets, les autres sont sur la page Bouquets ===== -->
+        <h2>Les bouquets de saison</h2>
+        <div class="photos">
+            <div class="produit">
+                <img src="../img/bouquet fleurie.avif" alt="Bouquet orange" width="200" height="200">
+                <h3>L'éclatant</h3>
+                <p class="prix">À partir de 29,99 €</p>
+            </div>
+            <div class="produit">
+                <img src="../img/bouquet blanc.avif" alt="Bouquet blanc" width="200" height="200">
+                <h3>Blanc Immortel</h3>
+                <p class="prix">À partir de 34,99 €</p>
+            </div>
+            <div class="produit">
+                <img src="../img/fleur lys.avif" alt="Bouquet lys" width="200" height="200">
+                <h3>Majesté Rose</h3>
+                <p class="prix">À partir de 29,99 €</p>
+            </div>
+            <div class="produit">
+                <img src="../img/bouquet melange.avif" alt="Bouquet mélange" width="200" height="200">
+                <h3>Douceur</h3>
+                <p class="prix">À partir de 34,99 €</p>
+            </div>
+        </div>
+        <p><a class="lien-bouton" href="bouquets.html">Voir tous les bouquets</a></p>
+
+                <!-- ===== Une fleur pour chaque occasion ===== -->
+                <!-- ===== Une fleur pour chaque occasion : on réutilise les classes "photos" et "produit" ===== -->
+        <h2>Une fleur pour chaque occasion</h2>
+        <div class="photos">
+
+            <div class="produit">
+                <img src="../img/bouquet cadeau.avif" alt="Bouquet de roses rouges et chocolats" width="200" height="200">
+                <h3>Anniversaire</h3>
+                <p>Un bouquet généreux, avec des chocolats si vous le souhaitez.</p>
+                <p><a href="bouquets.html">Découvrir</a></p>
+            </div>
+
+            <div class="produit">
+                <img src="../img/bouquet mariage.jpg" alt="Bouquet de mariage" width="200" height="200">
+                <h3>Mariage</h3>
+                <p>Bouquet de la mariée et décoration : parlons de votre projet.</p>
+                <p><a href="contact.html">Nous écrire</a></p>
+            </div>
+
+            <div class="produit">
+                <img src="../img/fleurs cado.avif" alt="Bouquet cadeau" width="200" height="200">
+                <h3>Dire merci</h3>
+                <p>Des fleurs simples pour remercier, féliciter ou s'excuser.</p>
+                <p><a href="bouquets.html">Découvrir</a></p>
+            </div>
+
+        </div>
+
+            
+
+        <!-- ===== Nos engagements ===== -->
+                <!-- ===== Nos engagements : 3 cases côte à côte avec une photo de fond ===== -->
+        <!-- Pour changer une photo : modifie le nom du fichier dans url('../img/...') -->
+        <h2>Pourquoi choisir Bohémia ?</h2>
+        <div class="photos">
+
+            <div class="produit" style="background-image: url('../img/bouquet blanc.avif'); display: flex; justify-content: center; align-items: center; height: 300px; background-size: cover; background-position: center;">
+                <div style="background-color: rgba(253, 251, 247, 0.9); margin: 20px; padding: 20px;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #534312; margin-top: 0;">Fleurs fraîches</h3>
+                    <p style="margin-bottom: 0;">Des fleurs sélectionnées chaque matin pour durer plus longtemps chez vous.</p>
+                </div>
+            </div>
+
+            <div class="produit" style="background-image: url('../img/livraison.jpg'); display: flex; justify-content: center; align-items: center; height: 300px; background-size: cover; background-position: center;">
+                <div style="background-color: rgba(253, 251, 247, 0.9); margin: 20px; padding: 20px;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #534312; margin-top: 0;">Livraison rapide</h3>
+                    <p style="margin-bottom: 0;">Livraison à Villejuif et dans les villes alentours, offerte dès 50 €.</p>
+                </div>
+            </div>
+
+            <div class="produit" style="background-image: url('../img/surmesure.jpg'); display: flex; justify-content: center; align-items: center; height: 300px; background-size: cover; background-position: center;">
+                <div style="background-color: rgba(253, 251, 247, 0.9); margin: 20px; padding: 20px;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #534312; margin-top: 0;">Sur mesure</h3>
+                    <p style="margin-bottom: 0;">Un budget, une couleur, une envie : nous composons le bouquet avec vous.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- ===== Fleur du moment : choisie au hasard par le JavaScript ===== -->
+        <h2>La fleur du moment</h2>
+        <div class="box">
+            <div id="fleur-semaine"></div>
+            <p><a class="lien-bouton" href="QuizzFleur.html">Quelle fleur êtes-vous ?</a></p>
+        </div>
+
+    </section>
+
+    <!-- ===== Pied de page : menu + lien vers la page à propos ===== -->
+    <footer>
+        <nav class="menu-footer">
+            <a href="accueil.html">Accueil</a>
+            <a href="bouquets.html">Bouquets</a>
+            <a href="contact.html">Contact</a>
+            <a href="apropos.html">À propos</a>
+        </nav>
+        <p>© 2026 Pauline SERPINET--MILLO &amp; Alice SABBAH</p>
+        <p>Tous droits réservés</p>
+    </footer>
+
+    <!-- ===== JavaScript (en bas de page, après le HTML) ===== -->
+    <script>
+        // Ferme le bandeau d'annonce quand on clique sur la croix
+        function fermerAnnonce() {
+            document.getElementById("annonce").style.display = "none";
+        }
+
+        // Liste des fleurs possibles (tu peux en ajouter : nom + description)
+        var fleursDuMoment = [
+            { nom: "Pivoine", description: "Romantique et généreuse, elle annonce l'arrivée des beaux jours." },
+            { nom: "Tournesol", description: "Solaire et joyeux, il apporte de la lumière dans toutes les pièces." },
+            { nom: "Lavande", description: "Apaisante et parfumée, elle se garde longtemps une fois séchée." },
+            { nom: "Dahlia", description: "Ses pétales très fournis donnent des bouquets spectaculaires en automne." },
+            { nom: "Orchidée", description: "Élégante et durable, elle demande peu d'eau mais beaucoup de lumière." }
+        ];
+
+        // On tire une fleur au hasard et on l'affiche dans la page
+        try {
+            var numero = Math.floor(Math.random() * fleursDuMoment.length);
+            var fleur = fleursDuMoment[numero];
+            document.getElementById("fleur-semaine").innerHTML =
+                "<h3>" + fleur.nom + "</h3>" +
+                "<p>" + fleur.description + "</p>";
+        } catch (erreur) {
+            // Si le script plante, le reste de la page reste affiché
+            console.log(erreur);
+        }
+    </script>
+
+</body>
+</html>
