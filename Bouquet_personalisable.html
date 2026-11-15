@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Composez un bouquet de fleurs personnalisé en quelques clics.">
+  <title>Mon bouquet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top"><span class="./img/resized_Logo web 1.png">✿</span> Bohemia<span> </span>Paris</a>
+    <nav aria-label="Navigation principale">
+      <a href="../html/accueil.html">Accueil</a>
+      <a href="#inspiration">Inspiration</a>
+      <a href="#composer">Créer mon bouquet</a>
+      <a class="nav-link" href="#mon-bouquet">Mon bouquet <span class="nav-count" id="navCount">0</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">UN BOUQUET QUI VOUS RESSEMBLE</p>
+        <h1>À vous de faire<br><em>fleurir vos idées.</em></h1>
+        <p>Choisissez vos fleurs préférées, ajoutez quelques feuillages et composez un bouquet unique, tout simplement.</p>
+        <a class="button" href="#composer">Créer mon bouquet <span>→</span></a>
+        <div class="hero-caption"><span>✳</span> Jusqu’à 30 tiges à composer librement</div>
+      </div>
+      <div class="hero-image">
+        <img src="../img/bouquet beige.avif" alt="Bouquet de fleurs mélangées" width="500" height="500">
+      </div>
+    </section>
+
+    <section class="builder" id="composer">
+      <div class="catalog-panel">
+        <div class="builder-heading">
+          <div>
+            <p class="eyebrow">ÉTAPE 1 — FAITES VOTRE CHOIX</p>
+            <h2>Les fleurs & feuillages</h2>
+          </div>
+          <span class="total-pill"><span id="totalCount">0</span> / 30 tiges</span>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrer les végétaux">
+          <button class="filter active" data-filter="tous">Tout voir</button>
+          <button class="filter" data-filter="fleur">Fleurs</button>
+          <button class="filter" data-filter="feuillage">Feuillages</button>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid" aria-live="polite"></div>
+        <p class="catalog-note">Sélectionnez une variété pour l’ajouter à votre bouquet. Vous pouvez en choisir plusieurs tiges.</p>
+      </div>
+
+      <aside class="summary-panel" id="mon-bouquet">
+        <div class="summary-top">
+          <p class="eyebrow">ÉTAPE 2 — VOTRE CRÉATION</p>
+          <h2>Mon bouquet</h2>
+          <p class="summary-subtitle">Il prend forme au fil de vos envies.</p>
+        </div>
+        <div class="bouquet-art" aria-label="Aperçu décoratif de votre bouquet">
+          <div class="paper-wrap"></div>
+          <div class="bouquet-stems" id="bouquetStems"><span class="empty-flower">✿</span></div>
+          <div class="bouquet-ribbon"></div>
+        </div>
+        <div class="summary-count"><strong id="summaryCount">0 tige</strong><span id="remainingCount">30 places disponibles</span></div>
+        <div class="selection-list" id="selectionList">
+          <p class="empty-message">Votre bouquet est encore vide.<br>Ajoutez vos premières fleurs !</p>
+        </div>
+        <div class="summary-actions">
+          <button class="button button-full" id="finishButton" type="button">Valider mon bouquet <span>✓</span></button>
+          <button class="reset-button" id="resetButton" type="button">Recommencer</button>
+        </div>
+        <p class="confirmation" id="confirmation" role="status" aria-live="polite"></p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Pauline SERPINET--MILLO & Alice SABBAH. Tous droits réservés.</p>
+    <nav aria-label="Liens de contact et FAQ">
+      <a href="../html/Contact.html">Contact</a>
+      <a href="../html/FAQ.html">FAQ</a>
+    </nav>
+  </footer>
+</body>
+</html>

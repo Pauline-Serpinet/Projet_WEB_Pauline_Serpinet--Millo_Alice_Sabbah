@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vérifiez votre panier et renseignez vos informations pour préparer votre commande florale.">
+  <title>Panier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="../index.html"><span class="logo-mark"></span> Bohemia<span> </span>Paris</a>
+    <nav aria-label="Navigation principale">
+      <a href="../acceuil.html">Accueil</a>
+      <a href="../createur.html">Créer mon bouquet</a>
+      <a class="active" href="../panier.html">Mon panier <span class="cart-count" id="headerCount">2</span></a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <div class="page-heading">
+      <p class="eyebrow">VOTRE PETIT COIN FLORAL</p>
+      <h1>Votre panier<span>.</span></h1>
+      <p>Encore quelques informations et votre attention fleurie sera prête à partir.</p>
+      <div class="steps" aria-label="Étapes de commande">
+        <span class="step done"><i>1</i> Panier</span>
+        <span class="step-line"></span>
+        <span class="step current"><i>2</i> Vos informations</span>
+        <span class="step-line"></span>
+        <span class="step"><i>3</i> Confirmation</span>
+      </div>
+    </div>
+
+    <div class="checkout-layout">
+      <section class="left-column">
+        <section class="panel basket-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">ÉTAPE 1</p>
+              <h2>Votre sélection</h2>
+            </div>
+            <span class="subtle" id="itemCount">2 articles</span>
+          </div>
+          <div id="basketItems" class="basket-items" aria-live="polite">
+            <article class="basket-item">
+              <div class="product-image rose-image" role="img" aria-label="Bouquet de roses roses"></div>
+              <div class="product-info">
+                <h3>Bouquet Rosée du matin</h3>
+                <p>Roses, lisianthus et eucalyptus</p>
+                <span class="product-note">Taille M · Papier naturel</span>
+                <div class="quantity-control"><button type="button">−</button><span>1</span><button type="button">+</button></div>
+              </div>
+              <strong class="item-price">39,00 €</strong>
+            </article>
+            <article class="basket-item">
+              <div class="product-image vase-image" role="img" aria-label="Vase en verre transparent"></div>
+              <div class="product-info">
+                <h3>Vase en verre</h3>
+                <p>Verre transparent · Taille classique</p>
+                <span class="product-note">Un joli complément</span>
+                <div class="quantity-control"><button type="button">−</button><span>1</span><button type="button">+</button></div>
+              </div>
+              <strong class="item-price">12,00 €</strong>
+            </article>
+          </div>
+          <a class="back-link" href="../createur.html">← Continuer mes créations</a>
+        </section>
+
+        <form id="checkoutForm" novalidate>
+          <section class="panel form-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">ÉTAPE 2</p>
+                <h2>Vos coordonnées</h2>
+              </div>
+              <span class="subtle">* Champs obligatoires</span>
+            </div>
+            <div class="form-grid">
+              <label>Prénom *<input name="firstName" autocomplete="given-name" placeholder="Ex. Camille" required></label>
+              <label>Nom *<input name="lastName" autocomplete="family-name" placeholder="Ex. Martin" required></label>
+              <label class="full">Adresse e-mail *<input name="email" type="email" autocomplete="email" placeholder="camille@exemple.fr" required></label>
+              <label class="full">Numéro de téléphone *<input name="phone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78" required></label>
+            </div>
+            <p class="field-help">Ces coordonnées servent à préparer et suivre votre commande dans le cadre de cette démonstration.</p>
+          </section>
+
+          <section class="panel form-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">ÉTAPE 3</p>
+                <h2>Livraison</h2>
+              </div>
+            </div>
+            <div class="form-grid">
+              <label class="full">Adresse de livraison *<input name="address" autocomplete="street-address" placeholder="Numéro et nom de rue" required></label>
+              <label>Code postal *<input name="postalCode" autocomplete="postal-code" inputmode="numeric" placeholder="75000" required></label>
+              <label>Ville *<input name="city" autocomplete="address-level2" placeholder="Paris" required></label>
+              <label>Date souhaitée *<input name="deliveryDate" type="date" required></label>
+              <label>Créneau souhaité
+                <select name="deliverySlot">
+                  <option value="Indifférent">Indifférent</option>
+                  <option value="Matin">Matin</option>
+                  <option value="Après-midi">Après-midi</option>
+                </select>
+              </label>
+              <label class="full">Un petit mot à joindre au bouquet <span class="optional">(facultatif)</span><textarea name="message" rows="3" maxlength="180" placeholder="Écrivez votre message ici…"></textarea><small class="counter"><span id="messageCount">0</span>/180 caractères</small></label>
+            </div>
+          </section>
+
+          <section class="panel form-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">DERNIÈRE ÉTAPE</p>
+                <h2>Vos préférences</h2>
+              </div>
+            </div>
+            <label class="checkbox-line"><input type="checkbox" name="gift" id="gift"> <span>Cette commande est un cadeau</span></label>
+            <label class="checkbox-line"><input type="checkbox" name="updates" id="updates"> <span>Je souhaite recevoir les actualités et conseils de Fleur & Saison (facultatif)</span></label>
+            <label class="checkbox-line required-consent"><input type="checkbox" name="privacy" required> <span>J’accepte que mes informations soient utilisées pour traiter cette commande. *</span></label>
+            <p class="privacy-note">Démo de site : les informations saisies ne sont ni envoyées ni enregistrées. Pour une vraie boutique, il faudra ajouter une politique de confidentialité et un traitement sécurisé des données.</p>
+          </section>
+          <div class="mobile-submit">
+            <button class="button button-wide" type="submit">Confirmer ma commande <span>→</span></button>
+            <p class="secure-note">Aucune commande ni aucun paiement réel ne sera effectué.</p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="panel summary-panel">
+        <p class="eyebrow">RÉCAPITULATIF</p>
+        <h2>Votre commande</h2>
+        <div class="summary-lines">
+          <div><span>Sous-total</span><strong id="subtotal">51,00 €</strong></div>
+          <div><span>Livraison</span><strong id="deliveryPrice">5,90 €</strong></div>
+          <div class="discount-line" id="discountLine" hidden><span>Réduction</span><strong id="discountAmount">−0,00 €</strong></div>
+        </div>
+        <div class="promo-area">
+          <label for="promoCode">Vous avez un code promo ?</label>
+          <div class="promo-input"><input id="promoCode" placeholder="Code de réduction"><button id="applyPromo" type="button">OK</button></div>
+          <small id="promoMessage" aria-live="polite">Exemple de code : FLEUR10</small>
+        </div>
+        <div class="total-line"><span>Total estimé</span><strong id="grandTotal">56,90 €</strong></div>
+        <p class="tax-note">Prix en euros, livraison comprise dans le total estimé. Les tarifs affichés sont fictifs pour cette maquette.</p>
+        <button class="button button-wide desktop-submit" type="button" id="summarySubmit">Confirmer ma commande <span>→</span></button>
+        <div class="reassurance">
+          <p><span>♡</span> Des fleurs choisies avec soin</p>
+          <p><span>♧</span> Une attention préparée avec délicatesse</p>
+          <p><span>⌑</span> Paiement sécurisé à connecter en version réelle</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="success-message" id="successMessage" role="status" aria-live="polite" hidden>
+      <span class="success-flower">✿</span>
+      <h2>Merci pour votre préparation de commande !</h2>
+      <p id="successDetails"></p>
+      <p class="demo-warning">Ceci est une démonstration : aucune commande n’a été transmise et aucun paiement n’a été effectué.</p>
+      <button class="button" id="editOrder" type="button">Modifier mes informations</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Pauline SERPINET--MILLO & Alice SABBAH. Tous droits réservés.</p>
+    <nav aria-label="Liens de contact et FAQ">
+      <a href="../html/Contact.html">Contact</a>
+      <a href="../html/FAQ.html">FAQ</a>
+    </nav> 
+  </footer>
+
+</body>
+</html>
+
