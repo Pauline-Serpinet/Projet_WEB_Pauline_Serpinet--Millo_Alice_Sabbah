@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quelle fleur êtes-vous ? - Bohémia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/accueil.css">
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header class="banniere">
+        <h1>Bohémia</h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="bouquets.html">Bouquets</a></li>
+                <li><a href="conseils.html">Conseils</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Quelle fleur êtes-vous ?</h2>
+
+        <form method="post" name="Quiz" action="#" class="box" id="QuizId" onsubmit="return false">
+
+            <!-- Premier fieldset : informations du visiteur -->
+             <fieldset id="informations">
+    <legend>Vos informations</legend>
+
+    <div class="champ">
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom">
+    </div>
+
+    <div class="champ">
+        <label for="statut">Statut :</label>
+        <select id="statut" name="statut">
+            <option value="">Choisissez un statut</option>
+            <option value="client">Client</option>
+            <option value="visiteur">Simple visiteur</option>
+            <option value="fleuriste">Fleuriste</option>
+            <option value="curieux">Curieux</option>
+        </select>
+    </div>
+
+    <input type="button" class="bouton" id="start" value="Commencer le quizz" onclick="quizAlert()">
+</fieldset>
+            
+
+            <!-- Deuxième fieldset : les questions  -->
+                <legend>Votre personnalité en 8 questions</legend>
+                <p><strong>1. Votre week-end idéal ?</strong></p>
+                <label><input type="radio" name="q1" value="t"> Une soirée animée avec mes amis</label><br>
+                <label><input type="radio" name="q1" value="l"> Une balade au calme en pleine nature</label><br>
+                <label><input type="radio" name="q1" value="r"> Un dîner romantique au restaurant</label><br>
+                <label><input type="radio" name="q1" value="o"> Une exposition ou un musée</label>
+
+                <p><strong>2. Votre couleur préférée ?</strong></p>
+                <label><input type="radio" name="q2" value="t"> Le jaune</label><br>
+                <label><input type="radio" name="q2" value="l"> Le violet</label><br>
+                <label><input type="radio" name="q2" value="r"> Le rouge</label><br>
+                <label><input type="radio" name="q2" value="o"> Le blanc</label>
+
+                <p><strong>3. Votre saison préférée ?</strong></p>
+                <label><input type="radio" name="q3" value="r"> Le printemps</label><br>
+                <label><input type="radio" name="q3" value="t"> L'été</label><br>
+                <label><input type="radio" name="q3" value="l"> L'automne</label><br>
+                <label><input type="radio" name="q3" value="o"> L'hiver</label>
+
+                <p><strong>4. Comment vous décrivent vos proches ?</strong></p>
+                <label><input type="radio" name="q4" value="t"> Joyeux(se) et optimiste</label><br>
+                <label><input type="radio" name="q4" value="l"> Calme et apaisant(e)</label><br>
+                <label><input type="radio" name="q4" value="r"> Passionné(e) et charismatique</label><br>
+                <label><input type="radio" name="q4" value="o"> Mystérieux(se) et élégant(e)</label>
+
+                <p><strong>5. Votre boisson préférée ?</strong></p>
+                <label><input type="radio" name="q5" value="t"> Un jus de fruits frais</label><br>
+                <label><input type="radio" name="q5" value="l"> Une tisane</label><br>
+                <label><input type="radio" name="q5" value="r"> Un cocktail</label><br>
+                <label><input type="radio" name="q5" value="o"> Un café en terrasse</label>
+
+                <p><strong>6. Quelle est votre plus grande qualité ?</strong></p>
+                <label><input type="radio" name="q6" value="t"> Ma bonne humeur</label><br>
+                <label><input type="radio" name="q6" value="l"> Mon calme</label><br>
+                <label><input type="radio" name="q6" value="r"> Mon charisme</label><br>
+                <label><input type="radio" name="q6" value="o"> Mon élégance</label>
+
+                <p><strong>7. Le cadeau qui vous ferait le plus plaisir ?</strong></p>
+                <label><input type="radio" name="q7" value="t"> Une sortie surprise</label><br>
+                <label><input type="radio" name="q7" value="l"> Un massage ou une bougie parfumée</label><br>
+                <label><input type="radio" name="q7" value="r"> Un grand bouquet de fleurs</label><br>
+                <label><input type="radio" name="q7" value="o"> Un beau bijou</label>
+
+                <p><strong>8. Votre animal préféré ?</strong></p>
+                <label><input type="radio" name="q8" value="t"> Le chien</label><br>
+                <label><input type="radio" name="q8" value="l"> Le lapin</label><br>
+                <label><input type="radio" name="q8" value="r"> Le cheval</label><br>
+                <label><input type="radio" name="q8" value="o"> Le chat</label>
+
+                <button type="button" class="bouton quiz" id="envoyer" onclick="submitQuiz()">Découvrir ma fleur</button>
+            </fieldset>
+
+            <!-- Le résultat sera affiché ici par le JavaScript -->
+            <div id="resultat-fleur"></div>
+        </form>
+
+        <!-- Tableau des résultats  -->
+        <div class="box">
+            <table id="result">
+                <caption>Vos résultats</caption>
+                <thead>
+                    <tr>
+                        <th>Essai</th>
+                        <th>Fleur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <nav class="menu-footer">
+    <a href="accueil.html">Accueil</a>
+    <a href="bouquets.html">Bouquets</a>
+    <a href="contact.html">Contact</a>
+    <a href="apropos.html">À propos</a>
+</nav>
+        <p>© 2026 Pauline SERPINET--MILLO &amp; Alice SABBAH</p>
+        <p>Tous droits réservés</p>
+    </footer>
+
+    <!-- Lien vers le JavaScript (en bas de page, après le HTML) -->
+    <script src="../js/quizzFleur.js"></script>
+
+</body>
+</html>
